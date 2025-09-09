@@ -13,28 +13,28 @@ Created over 20 custom DAX formulas to derive key metrics and calculated columns
 
 Some of the significant formulas implemented include:
 
-Average Listening Time
+# Average Listening Time
 
 Avg Listening Time = AVERAGE(SpotifyData[Minutes Listened])
 
 
 Calculates the average minutes users listened to tracks.
 
-Track Frequency
+# Track Frequency
 
 Track Frequency = COUNTROWS(SpotifyData)
 
 
 Measures how often each track was played.
 
-Distinct Artists Count
+# Distinct Artists Count
 
 Distinct Artists = DISTINCTCOUNT(SpotifyData[Artist Name])
 
 
 Counts the number of unique artists over a period.
 
-Year-over-Year (YoY) Listening Trend
+# Year-over-Year (YoY) Listening Trend
 
 YoY Listening = 
 CALCULATE([Avg Listening Time], 
@@ -43,7 +43,7 @@ CALCULATE([Avg Listening Time],
 
 Compares average listening time with the previous year.
 
-Top Artists Highlight (Min-Max Logic)
+# Top Artists Highlight (Min-Max Logic)
 
 Top Artist = 
 IF([Avg Listening Time] = CALCULATE(MAX([Avg Listening Time]), ALL(SpotifyData)), "Top Artist", "Other")
@@ -51,7 +51,7 @@ IF([Avg Listening Time] = CALCULATE(MAX([Avg Listening Time]), ALL(SpotifyData))
 
 Identifies artists with the highest listening times.
 
-Listening Pattern by Weekday
+# Listening Pattern by Weekday
 
 Avg Listening by Weekday = 
 AVERAGEX(
@@ -62,7 +62,7 @@ AVERAGEX(
 
 Analyzes listening patterns specific to weekdays.
 
-📂 What’s Included
+📂 Files Included
 
 Complete Power BI report (.pbix file) with interactive visuals
 
@@ -74,13 +74,13 @@ Sample reports demonstrating listening trends, artist comparisons, and user beha
 
 🚀 Impact
 
-Revealed patterns such as higher listening activity on weekdays
+* Revealed patterns such as higher listening activity on weekdays
 
-Enabled identification of top-performing artists and albums over time
+* Enabled identification of top-performing artists and albums over time
 
-Provided year-over-year metrics to track audience growth and engagement trends
+* Provided year-over-year metrics to track audience growth and engagement trends
 
-Empowered stakeholders with data-backed recommendations to enhance user experience and content strategy
+* Empowered stakeholders with data-backed recommendations to enhance user experience and content strategy
 
 🛠 Technologies Used
 
